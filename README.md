@@ -1,2 +1,2 @@
-# Exam-System-in-Java
+# Exam System in Java
 Examination System developed using Java
