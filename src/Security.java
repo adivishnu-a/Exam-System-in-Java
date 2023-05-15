@@ -20,7 +20,7 @@ public class Security {
         return str;
     }
 
-    public static int decString(String str){
+    public static int decInt(String str){
         Base64.Decoder decoder = Base64.getDecoder();
         str = new String(decoder.decode(str));
         return Integer.parseInt(str);

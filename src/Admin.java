@@ -9,6 +9,7 @@ public class Admin {
         int no=0;
         System.out.print("\033[H\033[2J");
         System.out.flush();
+        System.out.println("\n\n");
         for(QuestionPaper paper : d.papers){
             no++;
             System.out.println(no+" "+paper.name);
@@ -22,13 +23,14 @@ public class Admin {
         QuestionPaper newPaper = new QuestionPaper();
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("Enter Paper Name : ");
+        System.out.println("\n\n");
+        System.out.println("        Enter Paper Name : ");
         newPaper.name = sc.nextLine();
         newPaper.setPaper();
         newPaper.savePaper();
         d.papers.add(newPaper);
         d.savePapers();
-        System.out.print("Paper created successfully. Press Enter to Continue");
+        System.out.print("\n        Paper created successfully. Press Enter to Continue");
         sc.nextLine();
     }
 
@@ -37,7 +39,7 @@ public class Admin {
         Datasource d = new Datasource();
         d.readPapers();
         viewPapers();
-        System.out.println("\nEnter the Paper number to be edited : ");
+        System.out.println("\n        Enter the Paper number to be edited : ");
         int ch = sc.nextInt();
         ch=ch-1;
         d.papers.get(ch).editPaper();
@@ -48,17 +50,17 @@ public class Admin {
         Datasource d = new Datasource();
         d.readPapers();
         viewPapers();
-        System.out.println("\nEnter the Paper number to be deleted : ");
+        System.out.println("\n        Enter the Paper number to be deleted : ");
         int ch = sc.nextInt();
         ch=ch-1;
         File f= new File("C:\\Users\\adivi\\IdeaProjects\\ExamSystem\\files\\"+d.papers.get(ch).name+".txt");
         if(f.delete())
         {
-            System.out.println(f.getName() + " Deleted");
+            System.out.println("        "+f.getName() + " Deleted");
         }
         else
         {
-            System.out.println("Failed");
+            System.out.println("        Failed");
         }
         d.papers.remove(ch);
         d.savePapers();
@@ -70,15 +72,15 @@ public class Admin {
         while(true) {
             System.out.print("\033[H\033[2J");
             System.out.flush();
-            System.out.println("--------ADMIN DASHBOARD--------");
-            System.out.println("   1. View Question Papers     ");
-            System.out.println("   2. Add Question Paper       ");
-            System.out.println("   3. Edit Question Paper      ");
-            System.out.println("   4. Delete Question Paper    ");
-            System.out.println("   5. View Leaderboard         ");
-            System.out.println("   6. LOG OUT                  ");
-            System.out.println("-------------------------------");
-            System.out.print("Enter Your Choice : ");
+            System.out.println("\n\n        --------ADMIN DASHBOARD--------");
+            System.out.println("           1. View Question Papers     ");
+            System.out.println("           2. Add Question Paper       ");
+            System.out.println("           3. Edit Question Paper      ");
+            System.out.println("           4. Delete Question Paper    ");
+            System.out.println("           5. View Leaderboard         ");
+            System.out.println("           6. LOG OUT                  ");
+            System.out.println("        -------------------------------");
+            System.out.print("        Enter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
                 case 1 -> viewPapers();
@@ -90,8 +92,8 @@ public class Admin {
                     return;
                 }
                 default -> {
-                    System.out.println("\nInvalid Choice, try again");
-                    System.out.print("Login Failed, Press Enter to continue");
+                    System.out.println("\n        Invalid Choice, try again");
+                    System.out.print("        Login Failed, Press Enter to continue");
                     sc.nextLine();
                 }
             }

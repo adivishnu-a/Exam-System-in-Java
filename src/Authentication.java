@@ -11,10 +11,10 @@ public class Authentication {
         String inName, inPass;
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("-----LOG IN-----");
-        System.out.print("Enter Username : ");
+        System.out.println("\n\n        -----LOG IN-----");
+        System.out.print("        Enter Username : ");
         inName = sc.nextLine();
-        System.out.print("Enter Password(hidden for security) : ");
+        System.out.print("        Enter Password(hidden for security) : ");
         char[] ch=con.readPassword();
         inPass = String.valueOf(ch);
         d.readFile();
@@ -34,16 +34,16 @@ public class Authentication {
         String inName, inPass;
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("-----SIGN UP-----");
-        System.out.print("Enter Username : ");
+        System.out.println("\n\n        -----SIGN UP-----");
+        System.out.print("        Enter Username : ");
         inName = sc.nextLine();
-        System.out.print("Enter Password : ");
+        System.out.print("        Enter Password : ");
         inPass = sc.nextLine();
         d.readFile();
         Student newstu = new Student(inName, inPass, 0);
         d.users.add(newstu);
         d.saveFile();
-        System.out.print("Account created successfully. Press Enter to Continue");
+        System.out.print("\n        Account created successfully. Press Enter to Continue");
         sc.nextLine();
     }
 
@@ -54,10 +54,10 @@ public class Authentication {
         String inName, inPass;
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("-----LOG IN-----");
-        System.out.print("Enter Username : ");
+        System.out.println("\n\n        -----LOG IN-----");
+        System.out.print("        Enter Username : ");
         inName = sc.nextLine();
-        System.out.print("Enter Password(hidden for security) : ");
+        System.out.print("        Enter Password(hidden for security) : ");
         char[] ch=con.readPassword();
         inPass = String.valueOf(ch);
         if(inName.equals(d.AdminName)){

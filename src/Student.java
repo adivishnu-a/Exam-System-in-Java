@@ -12,39 +12,16 @@ public class Student {
         this.medals = m;
     }
 
-    public void setName(String n){
-        this.name = n;
-    }
-
-    public void setPass(String p){
-        this.pass = p;
-    }
-
-    public void setName(int m){
-        this.medals = m;
-    }
-
-    public String getName(){
-        return name;
-    }
-
-    public String getPass(){
-        return pass;
-    }
-
-    public int getMedals(){
-        return medals;
-    }
-
     public void viewPapers() throws IOException{
         Datasource d = new Datasource();
         d.readPapers();
         int no=0;
         System.out.print("\033[H\033[2J");
         System.out.flush();
+        System.out.println("\n\n");
         for(QuestionPaper paper : d.papers){
             no++;
-            System.out.println(no+" "+paper.name);
+            System.out.println("        "+no+" "+paper.name);
         }
     }
 
@@ -53,7 +30,7 @@ public class Student {
         Datasource d = new Datasource();
         d.readPapers();
         viewPapers();
-        System.out.print("\nEnter the Paper number to be start exam : ");
+        System.out.print("\n        Enter the Paper number to be start exam : ");
         int ch = sc.nextInt();
         ch=ch-1;
         int add = d.papers.get(ch).takeExam();
@@ -76,13 +53,13 @@ public class Student {
         while(true) {
             System.out.print("\033[H\033[2J");
             System.out.flush();
-            System.out.println("-----STUDENT DASHBOARD-----");
-            System.out.println("1. View Question Papers");
-            System.out.println("2. Take Exam");
-            System.out.println("3. View Leaderboard");
-            System.out.println("4. LOG OUT");
-            System.out.println("---------------------------");
-            System.out.print("Enter Your Choice : ");
+            System.out.println("\n\n          -----STUDENT DASHBOARD-----");
+            System.out.println("          1. View Question Papers");
+            System.out.println("          2. Take Exam");
+            System.out.println("          3. View Leaderboard");
+            System.out.println("          4. LOG OUT");
+            System.out.println("          ---------------------------");
+            System.out.print("          Enter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
                 case 1 -> viewPapers();
@@ -92,8 +69,8 @@ public class Student {
                     return;
                 }
                 default -> {
-                    System.out.println("\nInvalid Choice, try again");
-                    System.out.print("Login Failed, Press Enter to continue");
+                    System.out.println("\n        Invalid Choice, try again");
+                    System.out.print("        Login Failed, Press Enter to continue");
                     sc.nextLine();
                 }
             }
