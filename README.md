@@ -13,7 +13,7 @@ The Examination System is a Java-based application that allows students to take 
 - [Security.java](#securityjava)
 - [Student.java](#studentjava)
 
-Show some love by starring the repo ⭐
+Show some ❤️ by starring the repository! ⭐️
 ## Usage
 
 - Download the repository:
