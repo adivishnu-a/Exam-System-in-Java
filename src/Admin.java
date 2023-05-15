@@ -28,7 +28,7 @@ public class Admin {
         newPaper.savePaper();
         d.papers.add(newPaper);
         d.savePapers();
-        System.out.println("Paper created successfully. Press Enter to Continue");
+        System.out.print("Paper created successfully. Press Enter to Continue");
         sc.nextLine();
     }
 
