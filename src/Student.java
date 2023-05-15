@@ -58,6 +58,16 @@ public class Student {
         ch=ch-1;
         int add = d.papers.get(ch).takeExam();
         medals = medals+add;
+        d.readFile();
+        int i=0;
+        for(Student stu : d.users){
+            if(stu.name.equals(this.name))
+                break;
+            else
+                i++;
+        }
+        d.users.get(i).medals = this.medals;
+        d.saveFile();
     }
 
     public void stuMenu() throws Exception{
