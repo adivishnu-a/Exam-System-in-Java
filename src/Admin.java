@@ -51,7 +51,7 @@ public class Admin {
         System.out.println("\nEnter the Paper number to be deleted : ");
         int ch = sc.nextInt();
         ch=ch-1;
-        File f= new File("files\\"+d.papers.get(ch).name+".txt");
+        File f= new File("C:\\Users\\adivi\\IdeaProjects\\ExamSystem\\files\\"+d.papers.get(ch).name+".txt");
         if(f.delete())
         {
             System.out.println(f.getName() + " Deleted");
@@ -78,7 +78,7 @@ public class Admin {
             System.out.println("   5. View Leaderboard         ");
             System.out.println("   6. LOG OUT                  ");
             System.out.println("-------------------------------");
-            System.out.println("Enter Your Choice : ");
+            System.out.print("Enter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
                 case 1 -> viewPapers();
@@ -89,7 +89,11 @@ public class Admin {
                 case 6 -> {
                     return;
                 }
-                default -> System.out.println("\nInvalid Choice, try again");
+                default -> {
+                    System.out.println("\nInvalid Choice, try again");
+                    System.out.print("Login Failed, Press Enter to continue");
+                    sc.nextLine();
+                }
             }
         }
     }

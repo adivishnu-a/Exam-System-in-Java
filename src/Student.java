@@ -53,7 +53,7 @@ public class Student {
         Datasource d = new Datasource();
         d.readPapers();
         viewPapers();
-        System.out.println("\nEnter the Paper number to be start exam : ");
+        System.out.print("\nEnter the Paper number to be start exam : ");
         int ch = sc.nextInt();
         ch=ch-1;
         int add = d.papers.get(ch).takeExam();
@@ -82,7 +82,7 @@ public class Student {
             System.out.println("3. View Leaderboard");
             System.out.println("4. LOG OUT");
             System.out.println("---------------------------");
-            System.out.println("Enter Your Choice : ");
+            System.out.print("Enter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
                 case 1 -> viewPapers();
@@ -91,7 +91,11 @@ public class Student {
                 case 4 -> {
                     return;
                 }
-                default -> System.out.println("\nInvalid Choice, try again");
+                default -> {
+                    System.out.println("\nInvalid Choice, try again");
+                    System.out.print("Login Failed, Press Enter to continue");
+                    sc.nextLine();
+                }
             }
         }
     }

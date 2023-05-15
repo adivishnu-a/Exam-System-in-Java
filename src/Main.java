@@ -19,7 +19,7 @@ public class Main {
             System.out.println("--------------------------------");
             System.out.println("        Select 4 to EXIT        ");
             System.out.println("--------------------------------");
-            System.out.println("Enter : ");
+            System.out.print("Enter : ");
             ch = sc.nextInt();
             switch (ch) {
                 case 1 -> {
@@ -27,7 +27,7 @@ public class Main {
                     if (stu != null) {
                         stu.stuMenu();
                     } else {
-                        System.out.println("Login Failed, Press Enter to continue");
+                        System.out.print("Login Failed, Press Enter to continue");
                         sc.nextLine();
                     }
                 }
@@ -38,12 +38,16 @@ public class Main {
                     if (flag) {
                         adm.adminMenu();
                     } else {
-                        System.out.println("Login Failed, Press Enter to continue");
+                        System.out.print("Login Failed, Press Enter to continue");
                         sc.nextLine();
                     }
                 }
                 case 4 -> exit(0);
-                default -> System.out.println("\nInvalid Choice, try again");
+                default -> {
+                    System.out.println("\nInvalid Choice, try again");
+                    System.out.print("Login Failed, Press Enter to continue");
+                    sc.nextLine();
+                }
             }
         }
     }

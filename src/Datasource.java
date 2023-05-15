@@ -7,7 +7,7 @@ public class Datasource {
     String AdminPass = "iamadmin";
 
     public void readFile() throws IOException{
-        File file = new File("files/studata.txt");
+        File file = new File("C:\\Users\\adivi\\IdeaProjects\\ExamSystem\\files\\studata.txt");
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line;
         while ((line = reader.readLine()) != null) {
@@ -21,7 +21,7 @@ public class Datasource {
     }
 
     public void saveFile() throws Exception{
-        File file = new File("files/studata.txt");
+        File file = new File("C:\\Users\\adivi\\IdeaProjects\\ExamSystem\\files\\studata.txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         for(Student stu : users){
             writer.write(stu.name+" "+stu.pass+" "+stu.medals);
@@ -31,7 +31,7 @@ public class Datasource {
     }
 
     public void readPapers() throws IOException{
-        File file = new File("files/papers.txt");
+        File file = new File("C:\\Users\\adivi\\IdeaProjects\\ExamSystem\\files\\papers.txt");
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line;
         while ((line = reader.readLine()) != null) {
@@ -42,7 +42,7 @@ public class Datasource {
     }
 
     public void savePapers() throws Exception{
-        File file = new File("files/papers.txt");
+        File file = new File("C:\\Users\\adivi\\IdeaProjects\\ExamSystem\\files\\papers.txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         for(QuestionPaper temp : papers){
             writer.write(temp.name);

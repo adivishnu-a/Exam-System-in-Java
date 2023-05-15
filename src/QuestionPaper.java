@@ -24,7 +24,7 @@ public class QuestionPaper {
     ArrayList<Question> questions = new ArrayList<>();
 
     public void readPaper() throws Exception {
-        File file = new File("files/"+name+".txt");
+        File file = new File("C:\\Users\\adivi\\IdeaProjects\\ExamSystem\\files\\"+name+".txt");
         BufferedReader reader = new BufferedReader(new FileReader(file));
         num = Integer.parseInt(reader.readLine());
         for(int i=0; i<num; i++){
@@ -39,7 +39,7 @@ public class QuestionPaper {
     }
 
     public void savePaper() throws Exception{
-        File file = new File("files/"+name+".txt");
+        File file = new File("C:\\Users\\adivi\\IdeaProjects\\ExamSystem\\files\\"+name+".txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         writer.write(num);
         for(int i=0; i<num; i++){
@@ -59,19 +59,19 @@ public class QuestionPaper {
         Scanner sc = new Scanner(System.in);
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("Enter Test Name Once Again to Start : ");
+        System.out.print("Enter Test Name Once Again to Start : ");
         name = sc.nextLine();
-        System.out.println("Enter the total number of questions : ");
+        System.out.print("Enter the total number of questions : ");
         num = sc.nextInt();
         for(int i=0; i<num; i++){
-            System.out.println("\nEnter Question "+(i+1)+" : \n");
+            System.out.println("\nEnter Question "+(i+1)+" : ");
             String ques = sc.nextLine();
             String[] op = {"", "", "", ""};
             for(int j=0; j<4; j++){
-                System.out.println("Enter Option "+(j+1)+" : ");
+                System.out.print("Enter Option "+(j+1)+" : ");
                 op[j] = sc.nextLine();
             }
-            System.out.println("Enter the correct option number : ");
+            System.out.print("Enter the correct option number : ");
             int sol = sc.nextInt();
             Question newQue = new Question(ques, op, sol);
             questions.add(newQue);
@@ -87,18 +87,18 @@ public class QuestionPaper {
         for(int i=0; i<num; i++){
             System.out.println((i+1)+" "+questions.get(i).que);
         }
-        System.out.println("\nEnter the question number which needs to be edited : ");
+        System.out.print("\nEnter the question number which needs to be edited : ");
         int inp = sc.nextInt();
         inp=inp-1;
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("Enter the new question : \n");
+        System.out.println("Enter the new question : ");
         questions.get(inp).que = sc.nextLine();
         for(int i=0; i<4; i++){
-            System.out.println("Enter option "+(i+1)+" : ");
+            System.out.print("Enter option "+(i+1)+" : ");
             questions.get(inp).ops[i] = sc.nextLine();
         }
-        System.out.println("Enter correct option number : ");
+        System.out.print("Enter correct option number : ");
         questions.get(inp).ans = sc.nextInt();
         savePaper();
     }
@@ -110,7 +110,7 @@ public class QuestionPaper {
         System.out.flush();
         int points=0;
         readPaper();
-        System.out.println("Press Enter key to continue");
+        System.out.print("Press Enter key to continue");
         sc.next();
         for(int i=0; i<num; i++){
             System.out.print("\033[H\033[2J");
@@ -120,7 +120,7 @@ public class QuestionPaper {
             for(int j=0; j<4; j++){
                 System.out.println((j+1)+questions.get(i).ops[j]);
             }
-            System.out.println("\nEnter your choice : ");
+            System.out.print("\nEnter your choice : ");
             questions.get(i).ch = sc.nextInt();
             if(questions.get(i).ans == questions.get(i).ch){
                 points++;
