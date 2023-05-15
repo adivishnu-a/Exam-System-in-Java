@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Question{
     String que;
     String[] ops = {"","","",""};
-    int ans;
+    int ans,ch;
 
     public Question(){
         //Place Holder
@@ -64,7 +64,7 @@ public class QuestionPaper {
         System.out.println("Enter the total number of questions : ");
         num = sc.nextInt();
         for(int i=0; i<num; i++){
-            System.out.println("\nEnter Question No. "+(i+1)+" : \n");
+            System.out.println("\nEnter Question "+(i+1)+" : \n");
             String ques = sc.nextLine();
             String[] op = {"", "", "", ""};
             for(int j=0; j<4; j++){
@@ -103,11 +103,28 @@ public class QuestionPaper {
     }
 
     public int takeExam() throws Exception{
+        readPaper();
+        Scanner sc = new Scanner(System.in);
         System.out.print("\033[H\033[2J");
         System.out.flush();
         int points=0;
         readPaper();
-        System.out.println("");
+        System.out.println("Press Enter key to continue");
+        sc.next();
+        for(int i=0; i<num; i++){
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+            System.out.println("\t"+name);
+            System.out.println("\n"+questions.get(i).que+"\n");
+            for(int j=0; j<4; j++){
+                System.out.println((j+1)+questions.get(i).ops[j]);
+            }
+            System.out.println("\nEnter your choice : ");
+            questions.get(i).ch = sc.nextInt();
+            if(questions.get(i).ans == questions.get(i).ch){
+                points++;
+            }
+        }
         return points;
     }
 }

@@ -18,4 +18,14 @@ public class Datasource {
             users.add(stu);
         }
     }
+
+    public void saveFile() throws Exception{
+        File file = new File("files/studata.txt");
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        for(Student stu : users){
+            writer.write(stu.name+" "+stu.pass+" "+stu.medals);
+            writer.newLine();
+        }
+        writer.close();
+    }
 }
