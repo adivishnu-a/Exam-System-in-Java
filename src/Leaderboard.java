@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class Leaderboard {
-    public void showBoard() throws IOException {
+    public static void showBoard() throws IOException {
         Datasource d = new Datasource();
         d.readFile();
         for (int i = 0; i < d.users.size(); i++) {

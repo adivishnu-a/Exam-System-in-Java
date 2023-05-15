@@ -11,6 +11,7 @@ public class Authentication {
         String inName, inPass;
         System.out.print("\033[H\033[2J");
         System.out.flush();
+        System.out.println("-----LOG IN-----");
         System.out.println("Enter Username : ");
         inName = sc.nextLine();
         System.out.println("Enter Password(hidden for security) : ");
@@ -33,6 +34,7 @@ public class Authentication {
         String inName, inPass;
         System.out.print("\033[H\033[2J");
         System.out.flush();
+        System.out.println("-----SIGN UP-----");
         System.out.println("Enter Username : ");
         inName = sc.nextLine();
         System.out.println("Enter Password : ");
@@ -52,6 +54,7 @@ public class Authentication {
         String inName, inPass;
         System.out.print("\033[H\033[2J");
         System.out.flush();
+        System.out.println("-----LOG IN-----");
         System.out.println("Enter Username : ");
         inName = sc.nextLine();
         System.out.println("Enter Password(hidden for security) : ");

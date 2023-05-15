@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 public class Datasource {
     ArrayList<Student> users = new ArrayList<>();
+    ArrayList<QuestionPaper> papers = new ArrayList<>();
     String AdminName = "Admin1";
     String AdminPass = "iamadmin";
 
@@ -24,6 +25,27 @@ public class Datasource {
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         for(Student stu : users){
             writer.write(stu.name+" "+stu.pass+" "+stu.medals);
+            writer.newLine();
+        }
+        writer.close();
+    }
+
+    public void readPapers() throws IOException{
+        File file = new File("files/papers.txt");
+        BufferedReader reader = new BufferedReader(new FileReader(file));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            QuestionPaper pap = new QuestionPaper();
+            pap.name = line;
+            papers.add(pap);
+        }
+    }
+
+    public void savePapers() throws Exception{
+        File file = new File("files/papers.txt");
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        for(QuestionPaper temp : papers){
+            writer.write(temp.name);
             writer.newLine();
         }
         writer.close();

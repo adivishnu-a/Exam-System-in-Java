@@ -59,7 +59,7 @@ public class QuestionPaper {
         Scanner sc = new Scanner(System.in);
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("Enter Test Name : ");
+        System.out.println("Enter Test Name Once Again to Start : ");
         name = sc.nextLine();
         System.out.println("Enter the total number of questions : ");
         num = sc.nextInt();
@@ -100,6 +100,7 @@ public class QuestionPaper {
         }
         System.out.println("Enter correct option number : ");
         questions.get(inp).ans = sc.nextInt();
+        savePaper();
     }
 
     public int takeExam() throws Exception{
