@@ -38,6 +38,22 @@ public class QuestionPaper {
         }
     }
 
+    public void viewPaper() throws Exception {
+        Scanner sc = new Scanner(System.in);
+        readPaper();
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        System.out.println("\n");
+        for(Question que : questions){
+            System.out.println("\n        Q. "+que.que);
+            for(int j=0; j<4; j++){
+                System.out.println("        "+(j+1)+". "+que.ops[j]);
+            }
+        }
+        System.out.print("\n\n        Press Enter key to Continue");
+        sc.nextLine();
+    }
+
     public void savePaper() throws Exception{
         File file = new File("files\\qdata\\"+name+".txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
@@ -87,7 +103,7 @@ public class QuestionPaper {
         readPaper();
         Scanner sc = new Scanner(System.in);
         for(int i=0; i<num; i++){
-            System.out.println((i+1)+" "+questions.get(i).que);
+            System.out.println("        "+(i+1)+" "+questions.get(i).que);
         }
         System.out.print("\n        Enter the question number which needs to be edited : ");
         int inp = sc.nextInt();
@@ -95,7 +111,7 @@ public class QuestionPaper {
         inp=inp-1;
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("\n\n        Enter the new question : ");
+        System.out.print("\n\n        Enter the new question : ");
         questions.get(inp).que = sc.nextLine();
         for(int i=0; i<4; i++){
             System.out.print("        Enter option "+(i+1)+" : ");

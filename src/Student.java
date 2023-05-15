@@ -13,6 +13,7 @@ public class Student {
     }
 
     public void viewPapers() throws IOException{
+        Scanner sc = new Scanner(System.in);
         Datasource d = new Datasource();
         d.readPapers();
         int no=0;
@@ -23,6 +24,8 @@ public class Student {
             no++;
             System.out.println("        "+no+" "+paper.name);
         }
+        System.out.print("\n\n        Press Enter key to Continue");
+        sc.nextLine();
     }
 
     public void startExam() throws Exception{
@@ -62,17 +65,9 @@ public class Student {
             System.out.print("          Enter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
-                case 1 -> {
-                    viewPapers();
-                    System.out.print("\n\n        Press Enter key to Continue");
-                    sc.nextLine();
-                }
+                case 1 -> viewPapers();
                 case 2 -> startExam();
-                case 3 -> {
-                    Leaderboard.showBoard();
-                    System.out.print("\n\n        Press Enter key to Continue");
-                    sc.nextLine();
-                }
+                case 3 -> Leaderboard.showBoard();
                 case 4 -> {
                     return;
                 }

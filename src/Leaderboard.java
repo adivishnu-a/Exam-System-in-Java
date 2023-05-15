@@ -1,7 +1,9 @@
 import java.io.*;
+import java.util.Scanner;
 
 public class Leaderboard {
     public static void showBoard() throws IOException {
+        Scanner sc = new Scanner(System.in);
         Datasource d = new Datasource();
         d.readFile();
         for (int i = 0; i < d.users.size(); i++) {
@@ -17,12 +19,14 @@ public class Leaderboard {
         System.out.print("\033[H\033[2J");
         System.out.flush();
         System.out.println("\n        ----------LEADERBOARD----------");
-        System.out.println("         "+"Rank\tUsername\tMedals");
+        System.out.println("         "+"Rank\tUsername\t\t\tMedals");
         System.out.println("        -------------------------------");
         int rank=0;
         for(Student stu : d.users){
             rank++;
             System.out.println("         "+rank+"\t"+stu.name+"\t"+stu.medals);
         }
+        System.out.print("\n\n        Press Enter key to Continue");
+        sc.nextLine();
     }
 }

@@ -3,7 +3,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Admin {
-    public void viewPapers() throws IOException{
+    public void viewPapers() throws Exception {
+        Scanner sc = new Scanner(System.in);
         Datasource d = new Datasource();
         d.readPapers();
         int no=0;
@@ -14,6 +15,11 @@ public class Admin {
             no++;
             System.out.println("        "+no+".  "+paper.name);
         }
+        System.out.print("\n        Enter the Paper number to view : ");
+        int ch = sc.nextInt();
+        ch=ch-1;
+        d.papers.get(ch).readPaper();
+        d.papers.get(ch).viewPaper();
     }
 
     public void addPaper() throws Exception {
@@ -39,7 +45,7 @@ public class Admin {
         Datasource d = new Datasource();
         d.readPapers();
         viewPapers();
-        System.out.println("\n        Enter the Paper number to be edited : ");
+        System.out.print("\n        Enter the Paper number to be edited : ");
         int ch = sc.nextInt();
         ch=ch-1;
         d.papers.get(ch).editPaper();
@@ -87,19 +93,11 @@ public class Admin {
             System.out.print("        Enter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
-                case 1 -> {
-                    viewPapers();
-                    System.out.print("\n\n        Press Enter key to Continue");
-                    sc.nextLine();
-                }
+                case 1 -> viewPapers();
                 case 2 -> addPaper();
                 case 3 -> editPaper();
                 case 4 -> deletePaper();
-                case 5 -> {
-                    Leaderboard.showBoard();
-                    System.out.print("\n\n        Press Enter key to Continue");
-                    sc.nextLine();
-                }
+                case 5 -> Leaderboard.showBoard();
                 case 6 -> {
                     return;
                 }
