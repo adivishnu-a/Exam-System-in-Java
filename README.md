@@ -39,6 +39,8 @@ The Examination System is a Java-based application that allows students to take 
    javac Admin.java Authentication.java Datasource.java Leaderboard.java Main.java QuestionPaper.java Security.java Student.java
 ```
 
+- (Alternative) Run this app directly without all these steps by downloading the pre-built and pre-compiled version [here](https://github.com/adivishnu-a/ExamSystem/releases/tag/0.1.0)
+
 # Documentation
 
 ## Admin.java
