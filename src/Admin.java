@@ -37,7 +37,6 @@ public class Admin {
         Datasource d = new Datasource();
         d.readPapers();
         viewPapers();
-        QuestionPaper mod = new QuestionPaper();
         System.out.println("\nEnter the Paper number to be edited : ");
         int ch = sc.nextInt();
         ch=ch-1;
@@ -71,14 +70,15 @@ public class Admin {
         while(true) {
             System.out.print("\033[H\033[2J");
             System.out.flush();
-            System.out.println("-----ADMIN DASHBOARD-----");
-            System.out.println("1. View Question Papers");
-            System.out.println("2. Add Question Paper");
-            System.out.println("3. Edit Question Paper");
-            System.out.println("4. Delete Question Paper");
-            System.out.println("5. View Leaderboard");
-            System.out.println("6. LOG OUT");
-            System.out.println("-------------------------");
+            System.out.println("--------ADMIN DASHBOARD--------");
+            System.out.println("   1. View Question Papers     ");
+            System.out.println("   2. Add Question Paper       ");
+            System.out.println("   3. Edit Question Paper      ");
+            System.out.println("   4. Delete Question Paper    ");
+            System.out.println("   5. View Leaderboard         ");
+            System.out.println("   6. LOG OUT                  ");
+            System.out.println("-------------------------------");
+            System.out.println("Enter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
                 case 1 -> viewPapers();
