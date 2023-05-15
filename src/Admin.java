@@ -12,7 +12,7 @@ public class Admin {
         System.out.println("\n\n");
         for(QuestionPaper paper : d.papers){
             no++;
-            System.out.println(no+" "+paper.name);
+            System.out.println("        "+no+".  "+paper.name);
         }
     }
 
@@ -26,7 +26,7 @@ public class Admin {
         System.out.println("\n\n");
         System.out.println("        Enter Paper Name : ");
         newPaper.name = sc.nextLine();
-        newPaper.setPaper();
+        newPaper.setPaper(newPaper.name);
         newPaper.savePaper();
         d.papers.add(newPaper);
         d.savePapers();
@@ -43,6 +43,8 @@ public class Admin {
         int ch = sc.nextInt();
         ch=ch-1;
         d.papers.get(ch).editPaper();
+        System.out.print("\n\n        Press Enter key to Continue");
+        sc.nextLine();
     }
 
     public void deletePaper() throws Exception{
@@ -64,6 +66,8 @@ public class Admin {
         }
         d.papers.remove(ch);
         d.savePapers();
+        System.out.print("\n\n        Press Enter key to Continue");
+        sc.nextLine();
     }
 
     public void adminMenu() throws Exception {
@@ -83,11 +87,19 @@ public class Admin {
             System.out.print("        Enter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
-                case 1 -> viewPapers();
+                case 1 -> {
+                    viewPapers();
+                    System.out.print("\n\n        Press Enter key to Continue");
+                    sc.nextLine();
+                }
                 case 2 -> addPaper();
                 case 3 -> editPaper();
                 case 4 -> deletePaper();
-                case 5 -> Leaderboard.showBoard();
+                case 5 -> {
+                    Leaderboard.showBoard();
+                    System.out.print("\n\n        Press Enter key to Continue");
+                    sc.nextLine();
+                }
                 case 6 -> {
                     return;
                 }

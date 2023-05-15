@@ -54,17 +54,25 @@ public class Student {
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("\n\n          -----STUDENT DASHBOARD-----");
-            System.out.println("          1. View Question Papers");
-            System.out.println("          2. Take Exam");
-            System.out.println("          3. View Leaderboard");
-            System.out.println("          4. LOG OUT");
+            System.out.println("              1. View Question Papers");
+            System.out.println("              2. Take Exam");
+            System.out.println("              3. View Leaderboard");
+            System.out.println("              4. LOG OUT");
             System.out.println("          ---------------------------");
             System.out.print("          Enter Your Choice : ");
             ch = sc.nextInt();
             switch (ch) {
-                case 1 -> viewPapers();
+                case 1 -> {
+                    viewPapers();
+                    System.out.print("\n\n        Press Enter key to Continue");
+                    sc.nextLine();
+                }
                 case 2 -> startExam();
-                case 3 -> Leaderboard.showBoard();
+                case 3 -> {
+                    Leaderboard.showBoard();
+                    System.out.print("\n\n        Press Enter key to Continue");
+                    sc.nextLine();
+                }
                 case 4 -> {
                     return;
                 }

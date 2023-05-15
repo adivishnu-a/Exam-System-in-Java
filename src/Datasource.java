@@ -3,7 +3,7 @@ import java.io.*;
 public class Datasource {
     ArrayList<Student> users = new ArrayList<>();
     ArrayList<QuestionPaper> papers = new ArrayList<>();
-    String AdminName = "Admin1";
+    String AdminName = "admin";
     String AdminPass = "iamadmin";
 
     public void readFile() throws IOException{
