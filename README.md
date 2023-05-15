@@ -141,6 +141,11 @@ Contributions to the Examination System are welcome. If you want to contribute, 
 - Push the branch to your forked repository.
 - Submit a pull request.
 
+### Planned Features
+
+- [ ] Adding a Grapical User Interface (GUI)
+- [ ] Enhancing the Question Navigation
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
