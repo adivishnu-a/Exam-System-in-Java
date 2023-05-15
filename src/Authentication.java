@@ -3,6 +3,8 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.io.Console;
 
+//v0.1.0
+
 public class Authentication {
     public static Student StuLogin() throws IOException {
         Scanner sc = new Scanner(System.in);

@@ -1,5 +1,7 @@
 import java.util.Base64;
 
+//v0.1.0
+
 public class Security {
     public static String encStr(String str){
         Base64.Encoder encoder = Base64.getEncoder();

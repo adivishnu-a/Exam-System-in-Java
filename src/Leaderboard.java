@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.Scanner;
 
+//v0.1.0
+
 public class Leaderboard {
     public static void showBoard() throws IOException {
         Scanner sc = new Scanner(System.in);

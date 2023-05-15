@@ -1,6 +1,8 @@
 import java.util.*;
 import static java.lang.System.exit;
 
+//v0.1.0
+
 public class Main {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);

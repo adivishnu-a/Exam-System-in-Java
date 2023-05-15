@@ -2,6 +2,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//v0.1.0
+
 class Question{
     String que;
     String[] ops = {"","","",""};

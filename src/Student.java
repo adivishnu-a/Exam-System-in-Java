@@ -1,6 +1,8 @@
 import java.util.*;
 import java.io.*;
 
+//v0.1.0
+
 public class Student {
     String name;
     String pass;
