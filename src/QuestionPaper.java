@@ -63,7 +63,7 @@ public class QuestionPaper {
         name = sc.nextLine();
         System.out.print("Enter the total number of questions : ");
         num = sc.nextInt();
-        System.out.flush();
+        sc.nextLine();
         for(int i=0; i<num; i++){
             System.out.println("\nEnter Question "+(i+1)+" : ");
             String ques = sc.nextLine();
@@ -90,6 +90,7 @@ public class QuestionPaper {
         }
         System.out.print("\nEnter the question number which needs to be edited : ");
         int inp = sc.nextInt();
+        sc.nextLine();
         inp=inp-1;
         System.out.print("\033[H\033[2J");
         System.out.flush();
