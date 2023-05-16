@@ -21,12 +21,12 @@ public class Leaderboard {
         System.out.print("\033[H\033[2J");
         System.out.flush();
         System.out.println("\n        ----------LEADERBOARD----------");
-        System.out.println("         "+"Rank\tUsername\t\t\tMedals");
+        System.out.println("         "+"Rank\tUsername\tMedals");
         System.out.println("        -------------------------------");
         int rank=0;
         for(Student stu : d.users){
             rank++;
-            System.out.println("         "+rank+"\t"+stu.name+"\t"+stu.medals);
+            System.out.println("         "+rank+"\t"+stu.name+"\t\t"+stu.medals);
         }
         System.out.print("\n\n        Press Enter key to Continue");
         sc.nextLine();
