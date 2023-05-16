@@ -24,7 +24,7 @@ public class Student {
         System.out.println("\n\n");
         for(QuestionPaper paper : d.papers){
             no++;
-            System.out.println("        "+no+" "+paper.name);
+            System.out.println("        "+no+". "+paper.name);
         }
         System.out.print("\n\n        Press Enter key to Continue");
         sc.nextLine();

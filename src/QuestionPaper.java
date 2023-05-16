@@ -105,7 +105,7 @@ public class QuestionPaper {
         readPaper();
         Scanner sc = new Scanner(System.in);
         for(int i=0; i<num; i++){
-            System.out.println("        "+(i+1)+" "+questions.get(i).que);
+            System.out.println("        "+(i+1)+". "+questions.get(i).que);
         }
         System.out.print("\n        Enter the question number which needs to be edited : ");
         int inp = sc.nextInt();
@@ -136,8 +136,8 @@ public class QuestionPaper {
         for(int i=0; i<num; i++){
             System.out.print("\033[H\033[2J");
             System.out.flush();
-            System.out.println("\n\n\t        "+name);
-            System.out.println("\n        "+questions.get(i).que+"\n");
+            System.out.println("\n\n\t         "+name);
+            System.out.println("\n        Q"+i+". "+questions.get(i).que+"\n");
             for(int j=0; j<4; j++){
                 System.out.println("        "+(j+1)+".  "+questions.get(i).ops[j]);
             }
