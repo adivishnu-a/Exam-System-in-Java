@@ -42,8 +42,6 @@ public class Authentication {
             System.out.println("\n\n        -----SIGN UP-----");
             System.out.print("        Enter Username : ");
             inName = sc.nextLine();
-            System.out.print("        Enter Password : ");
-            inPass = sc.nextLine();
             for(Student check : d.users){
                 if(check.name.equals(inName)){
                     System.out.print("\n        Username already exists. Press 1 to exit or 2 to try again : ");
@@ -53,6 +51,8 @@ public class Authentication {
                         return;
                     }
                 }else {
+                    System.out.print("        Enter Password : ");
+                    inPass = sc.nextLine();
                     Student newstu = new Student(inName, inPass, 0);
                     d.users.add(newstu);
                     d.saveFile();
