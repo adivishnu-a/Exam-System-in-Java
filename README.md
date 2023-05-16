@@ -4,14 +4,12 @@
 
 The Examination System is a Java-based application that allows students to take exams, view question papers, and track their performance. In this, each student is rewarded with medals based on their test performance. It also provides an administrative interface to manage question papers and view the leaderboard. The application consists of several Java files that work together to implement the functionality. 
 
-- [Admin.java](#adminjava)
-- [Authentication.java](#authenticationjava)
-- [Datasource.java](#datasourcejava)
-- [Leaderboard.java](#leaderboardjava)
-- [Main.java](#mainjava)
-- [QuestionPaper.java](#questionpaperjava)
-- [Security.java](#securityjava)
-- [Student.java](#studentjava)
+### Table of Contents:
+
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
 
 Show some ❤️ by starring the repository! ⭐️
 ## Usage
@@ -43,6 +41,17 @@ Show some ❤️ by starring the repository! ⭐️
 - (Alternative) Run this app directly without all these steps by downloading the pre-built and pre-compiled version [here](https://github.com/adivishnu-a/ExamSystem/releases/tag/0.1.0)
 
 # Documentation
+
+### Modules
+
+- [Admin.java](#adminjava)
+- [Authentication.java](#authenticationjava)
+- [Datasource.java](#datasourcejava)
+- [Leaderboard.java](#leaderboardjava)
+- [Main.java](#mainjava)
+- [QuestionPaper.java](#questionpaperjava)
+- [Security.java](#securityjava)
+- [Student.java](#studentjava)
 
 ## Admin.java
 
