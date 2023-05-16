@@ -34,14 +34,12 @@ public class Authentication {
         Scanner sc = new Scanner(System.in);
         Datasource d = new Datasource();
         d.readFile();
-        String inName, inPass;
-
         while(true){
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("\n\n        -----SIGN UP-----");
             System.out.print("        Enter Username : ");
-            inName = sc.nextLine();
+            String inName = sc.nextLine();
             for(Student check : d.users){
                 if(check.name.equals(inName)){
                     System.out.print("\n        Username already exists. Press 1 to exit or 2 to try again : ");
@@ -50,11 +48,11 @@ public class Authentication {
                     if(ch==1){
                         return;
                     }else{
-                        inName = "";
+                        continue;
                     }
-                }else {
+                } else {
                     System.out.print("        Enter Password : ");
-                    inPass = sc.nextLine();
+                    String inPass = sc.nextLine();
                     Student newstu = new Student(inName, inPass, 0);
                     d.users.add(newstu);
                     d.saveFile();
