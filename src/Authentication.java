@@ -33,20 +33,34 @@ public class Authentication {
     public static void StuSignup() throws Exception {
         Scanner sc = new Scanner(System.in);
         Datasource d = new Datasource();
-        String inName, inPass;
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-        System.out.println("\n\n        -----SIGN UP-----");
-        System.out.print("        Enter Username : ");
-        inName = sc.nextLine();
-        System.out.print("        Enter Password : ");
-        inPass = sc.nextLine();
         d.readFile();
-        Student newstu = new Student(inName, inPass, 0);
-        d.users.add(newstu);
-        d.saveFile();
-        System.out.print("\n        Account created successfully. Press Enter to Continue");
-        sc.nextLine();
+        String inName, inPass;
+
+        while(true){
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+            System.out.println("\n\n        -----SIGN UP-----");
+            System.out.print("        Enter Username : ");
+            inName = sc.nextLine();
+            System.out.print("        Enter Password : ");
+            inPass = sc.nextLine();
+            for(Student check : d.users){
+                if(check.name.equals(inName)){
+                    System.out.print("\n        Username already exists. Press 1 to exit or 2 to try again : ");
+                    int ch = sc.nextInt();
+                    sc.nextLine();
+                    if(ch==1){
+                        return;
+                    }
+                }else {
+                    Student newstu = new Student(inName, inPass, 0);
+                    d.users.add(newstu);
+                    d.saveFile();
+                    System.out.print("\n        Account created successfully. Press Enter to Continue");
+                    sc.nextLine();
+                }
+            }
+        }
     }
 
     public static boolean AdminLogin() throws IOException {
