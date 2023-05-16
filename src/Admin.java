@@ -20,7 +20,6 @@ public class Admin {
         System.out.print("\n        Enter the Paper number to view : ");
         int ch = sc.nextInt();
         ch=ch-1;
-        d.papers.get(ch).readPaper();
         d.papers.get(ch).viewPaper();
     }
 
@@ -32,7 +31,7 @@ public class Admin {
         System.out.print("\033[H\033[2J");
         System.out.flush();
         System.out.println("\n\n");
-        System.out.println("        Enter Paper Name : ");
+        System.out.print("        Enter Paper Name : ");
         newPaper.name = sc.nextLine();
         newPaper.setPaper(newPaper.name);
         newPaper.savePaper();
@@ -63,7 +62,7 @@ public class Admin {
         System.out.println("\n        Enter the Paper number to be deleted : ");
         int ch = sc.nextInt();
         ch=ch-1;
-        File f= new File("C:\\Users\\adivi\\IdeaProjects\\ExamSystem\\files\\"+d.papers.get(ch).name+".txt");
+        File f= new File("files\\qdata\\"+d.papers.get(ch).name+".txt");
         if(f.delete())
         {
             System.out.println("        "+f.getName() + " Deleted");

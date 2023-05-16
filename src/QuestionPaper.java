@@ -82,7 +82,7 @@ public class QuestionPaper {
         num = sc.nextInt();
         sc.nextLine();
         for(int i=0; i<num; i++){
-            System.out.println("\n        Enter Question "+(i+1)+" : ");
+            System.out.print("\n        Enter Question "+(i+1)+" : ");
             String ques = sc.nextLine();
             String[] op = {"", "", "", ""};
             for(int j=0; j<4; j++){
