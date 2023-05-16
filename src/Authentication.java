@@ -49,6 +49,8 @@ public class Authentication {
                     sc.nextLine();
                     if(ch==1){
                         return;
+                    }else{
+                        inName = "";
                     }
                 }else {
                     System.out.print("        Enter Password : ");
