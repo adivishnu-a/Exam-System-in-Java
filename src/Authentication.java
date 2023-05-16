@@ -35,31 +35,26 @@ public class Authentication {
         Datasource d = new Datasource();
         d.readFile();
         while(true){
+            String inName, inPass;
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("\n\n        -----SIGN UP-----");
             System.out.print("        Enter Username : ");
-            String inName = sc.nextLine();
+            inName = sc.nextLine();
             for(Student check : d.users){
                 if(check.name.equals(inName)){
-                    System.out.print("\n        Username already exists. Press 1 to exit or 2 to try again : ");
-                    int ch = sc.nextInt();
+                    System.out.print("\n        Username already exists. Press ENTER to continue");
                     sc.nextLine();
-                    if(ch==1){
-                        return;
-                    }else{
-                        continue;
-                    }
-                } else {
-                    System.out.print("        Enter Password : ");
-                    String inPass = sc.nextLine();
-                    Student newstu = new Student(inName, inPass, 0);
-                    d.users.add(newstu);
-                    d.saveFile();
-                    System.out.print("\n        Account created successfully. Press Enter to Continue");
-                    sc.nextLine();
+                    return;
                 }
             }
+            System.out.print("        Enter Password : ");
+            inPass = sc.nextLine();
+            Student newstu = new Student(inName, inPass, 0);
+            d.users.add(newstu);
+            d.saveFile();
+            System.out.print("\n        Account created successfully. Press Enter to Continue");
+            sc.nextLine();
         }
     }
 
