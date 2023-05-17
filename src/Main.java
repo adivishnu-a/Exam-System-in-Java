@@ -18,7 +18,7 @@ public class Main {
             System.out.println("                  2. NEW STUDENT        ");
             System.out.println("                    3. ADMIN            ");
             System.out.println("        --------------------------------");
-            System.out.println("                Select 4 to EXIT        ");
+            System.out.println("                \u001B[31mSelect 4 to EXIT\u001B[0m        ");
             System.out.println("        --------------------------------");
             System.out.print("        \u001B[33mEnter : \u001B[0m");
             ch = sc.nextInt();

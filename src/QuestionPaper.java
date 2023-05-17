@@ -131,7 +131,7 @@ public class QuestionPaper {
         System.out.flush();
         int points=0;
         readPaper();
-        System.out.print("\n\n        Press Enter key to START");
+        System.out.print("\n\n        \u001B[34mPress Enter key to START\u001B[0m");
         sc.nextLine();
         for(int i=0; i<num; i++){
             System.out.print("\033[H\033[2J");
@@ -141,7 +141,7 @@ public class QuestionPaper {
             for(int j=0; j<4; j++){
                 System.out.println("        "+(j+1)+".  "+questions.get(i).ops[j]);
             }
-            System.out.print("\n        Enter your choice : ");
+            System.out.print("\n        \u001B[34mEnter your choice : \u001B[0m");
             questions.get(i).ch = sc.nextInt();
             if(questions.get(i).ans == questions.get(i).ch){
                 points++;

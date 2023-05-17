@@ -69,7 +69,7 @@ public class Student {
             System.out.println("              1. View Question Papers");
             System.out.println("              2. Take Exam");
             System.out.println("              3. View Leaderboard");
-            System.out.println("              4. LOG OUT");
+            System.out.println("              \u001B[31m4. LOG OUT\u001B[0m");
             System.out.println("          ---------------------------");
             System.out.print("          \u001B[33mEnter Your Choice : \u001B[0m");
             ch = sc.nextInt();

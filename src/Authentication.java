@@ -13,7 +13,7 @@ public class Authentication {
         String inName, inPass;
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("\n\n        -----LOG IN-----");
+        System.out.println("\n\n        \u001B[34m-----LOG IN-----\u001B[0m");
         System.out.print("        Enter Username : ");
         inName = sc.nextLine();
         System.out.print("        Enter Password(hidden for security) : ");
@@ -37,7 +37,7 @@ public class Authentication {
             String inName, inPass;
             System.out.print("\033[H\033[2J");
             System.out.flush();
-            System.out.println("\n\n        -----SIGN UP-----");
+            System.out.println("\n\n        \u001B[34m-----SIGN UP-----\u001B[0m");
             System.out.print("        Enter Username : ");
             inName = sc.nextLine();
             for(Student check : d.users){
@@ -63,7 +63,7 @@ public class Authentication {
         String inName, inPass;
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("\n\n        -----LOG IN-----");
+        System.out.println("\n\n        \u001B[34m-----LOG IN-----\u001B[0m");
         System.out.print("        Enter Username : ");
         inName = sc.nextLine();
         System.out.print("        Enter Password(hidden for security) : ");

@@ -95,7 +95,7 @@ public class Admin {
             System.out.println("           3. Edit Question Paper      ");
             System.out.println("           4. Delete Question Paper    ");
             System.out.println("           5. View Leaderboard         ");
-            System.out.println("           6. LOG OUT                  ");
+            System.out.println("           \u001B[31m6. LOG OUT\u001B[0m                  ");
             System.out.println("        -------------------------------");
             System.out.print("        \u001B[33mEnter Your Choice : \u001B[0m");
             ch = sc.nextInt();
