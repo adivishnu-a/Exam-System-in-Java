@@ -34,7 +34,6 @@ public class Authentication {
         Scanner sc = new Scanner(System.in);
         Datasource d = new Datasource();
         d.readFile();
-        while(true){
             String inName, inPass;
             System.out.print("\033[H\033[2J");
             System.out.flush();
@@ -55,7 +54,6 @@ public class Authentication {
             d.saveFile();
             System.out.print("\n        Account created successfully. Press Enter to Continue");
             sc.nextLine();
-        }
     }
 
     public static boolean AdminLogin() throws IOException {

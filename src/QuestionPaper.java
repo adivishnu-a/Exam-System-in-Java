@@ -26,7 +26,7 @@ public class QuestionPaper {
     ArrayList<Question> questions = new ArrayList<>();
 
     public void readPaper() throws Exception {
-        File file = new File("files\\qdata\\"+name+".txt");
+        File file = new File("files\\qdata\\"+Security.encStr(name)+".txt");
         BufferedReader reader = new BufferedReader(new FileReader(file));
         num = Integer.parseInt(Security.decStr(reader.readLine()));
         for(int i=0; i<num; i++){
@@ -57,7 +57,7 @@ public class QuestionPaper {
     }
 
     public void savePaper() throws Exception{
-        File file = new File("files\\qdata\\"+name+".txt");
+        File file = new File("files\\qdata\\"+Security.encStr(name)+".txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         writer.write(Security.encInt(num));
         for(int i=0; i<num; i++){

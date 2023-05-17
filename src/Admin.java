@@ -68,7 +68,7 @@ public class Admin {
         System.out.println("\n        Enter the Paper number to be deleted : ");
         int ch = sc.nextInt();
         ch=ch-1;
-        File f= new File("files\\qdata\\"+d.papers.get(ch).name+".txt");
+        File f= new File("files\\qdata\\"+Security.encStr(d.papers.get(ch).name)+".txt");
         if(f.delete())
         {
             System.out.println("        "+f.getName() + " Deleted");
