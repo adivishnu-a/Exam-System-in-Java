@@ -11,7 +11,7 @@ public class Main {
             System.out.print("\033[H\033[2J");
             System.out.flush();
             System.out.println("\n\n        --------------------------------");
-            System.out.println("        -------EXAMINATION SYSTEM-------");
+            System.out.println("        \u001B[33m-------EXAMINATION SYSTEM-------\u001B[0m");
             System.out.println("        --------------------------------");
             System.out.println("                Select User Type        ");
             System.out.println("               1. EXISTING STUDENT      ");
@@ -20,7 +20,7 @@ public class Main {
             System.out.println("        --------------------------------");
             System.out.println("                Select 4 to EXIT        ");
             System.out.println("        --------------------------------");
-            System.out.print("        Enter : ");
+            System.out.print("        \u001B[33mEnter : \u001B[0m");
             ch = sc.nextInt();
             sc.nextLine();
             switch (ch) {
@@ -29,7 +29,7 @@ public class Main {
                     if (stu != null) {
                         stu.stuMenu();
                     } else {
-                        System.out.print("\n        Login Failed, Press Enter to continue");
+                        System.out.print("\n        \u001B[31mLogin Failed, Press Enter to continue\u001B[0m");
                         sc.nextLine();
                     }
                 }
@@ -40,14 +40,14 @@ public class Main {
                     if (flag) {
                         adm.adminMenu();
                     } else {
-                        System.out.print("\n        Login Failed, Press Enter to continue");
+                        System.out.print("\n        \u001B[31mLogin Failed, Press Enter to continue\u001B[0m");
                         sc.nextLine();
                     }
                 }
                 case 4 -> exit(0);
                 default -> {
-                    System.out.println("\n        Invalid Choice, try again");
-                    System.out.print("        Login Failed, Press Enter to continue");
+                    System.out.println("\n         \u001B[31mInvalid Choice, try again");
+                    System.out.print("        Press Enter to continue\u001B[0m");
                     sc.nextLine();
                 }
             }

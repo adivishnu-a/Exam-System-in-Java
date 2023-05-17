@@ -21,14 +21,14 @@ public class Leaderboard {
         System.out.print("\033[H\033[2J");
         System.out.flush();
         System.out.println("\n        ----------LEADERBOARD----------");
-        System.out.println("         "+"Rank\tUsername\tMedals");
+        System.out.println("         "+"\u001B[33mRank\tUsername\tMedals\u001B[0m");
         System.out.println("        -------------------------------");
         int rank=0;
         for(Student stu : d.users){
             rank++;
             System.out.println("         "+rank+"\t"+stu.name+"\t\t"+stu.medals);
         }
-        System.out.print("\n\n        Press Enter key to Continue");
+        System.out.print("\n\n        \u001B[32mPress Enter key to Continue\u001B[0m");
         sc.nextLine();
     }
 }

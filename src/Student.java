@@ -42,8 +42,8 @@ public class Student {
             ch = ch - 1;
             add = d.papers.get(ch).takeExam();
         } catch (Exception e){
-            System.out.println("        Paper Not Found");
-            System.out.print("\n\n        Press Enter key to Continue");
+            System.out.println("        \u001B[31mPaper Not Found");
+            System.out.print("\n\n        Press Enter key to Continue\u001B[30m");
             sc.nextLine();
         }
         medals = medals + add;
@@ -65,13 +65,13 @@ public class Student {
         while(true) {
             System.out.print("\033[H\033[2J");
             System.out.flush();
-            System.out.println("\n\n          -----STUDENT DASHBOARD-----");
+            System.out.println("\n\n          \u001B[32m-----STUDENT DASHBOARD-----\u001B[0m");
             System.out.println("              1. View Question Papers");
             System.out.println("              2. Take Exam");
             System.out.println("              3. View Leaderboard");
             System.out.println("              4. LOG OUT");
             System.out.println("          ---------------------------");
-            System.out.print("          Enter Your Choice : ");
+            System.out.print("          \u001B[33mEnter Your Choice : \u001B[0m");
             ch = sc.nextInt();
             switch (ch) {
                 case 1 -> viewPapers();
@@ -81,8 +81,8 @@ public class Student {
                     return;
                 }
                 default -> {
-                    System.out.println("\n        Invalid Choice, try again");
-                    System.out.print("        Login Failed, Press Enter to continue");
+                    System.out.println("\n        \u001B[31mInvalid Choice, try again");
+                    System.out.print("        Press Enter to continue\u001B[0m");
                     sc.nextLine();
                 }
             }

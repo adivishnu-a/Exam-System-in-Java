@@ -42,7 +42,7 @@ public class Authentication {
             inName = sc.nextLine();
             for(Student check : d.users){
                 if(check.name.equals(inName)){
-                    System.out.print("\n        Username already exists. Press ENTER to continue");
+                    System.out.print("\n        \u001B[31mUsername already exists. Press ENTER to continue\u001B[0m");
                     sc.nextLine();
                     return;
                 }
@@ -52,7 +52,7 @@ public class Authentication {
             Student newstu = new Student(inName, inPass, 0);
             d.users.add(newstu);
             d.saveFile();
-            System.out.print("\n        Account created successfully. Press Enter to Continue");
+            System.out.print("\n        \u001B[32mAccount created successfully. Press Enter to Continue\u001B[0m");
             sc.nextLine();
     }
 

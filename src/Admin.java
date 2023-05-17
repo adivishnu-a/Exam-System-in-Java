@@ -23,8 +23,8 @@ public class Admin {
             ch = ch - 1;
             d.papers.get(ch).viewPaper();
         } catch (Exception e){
-            System.out.println("        Paper Not Found");
-            System.out.print("\n\n        Press Enter key to Continue");
+            System.out.println("        \u001B[31mPaper Not Found");
+            System.out.print("\n\n        Press Enter key to Continue\u001B[0m");
             sc.nextLine();
         }
     }
@@ -43,7 +43,7 @@ public class Admin {
         newPaper.savePaper();
         d.papers.add(newPaper);
         d.savePapers();
-        System.out.print("\n        Paper created successfully. Press Enter to Continue");
+        System.out.print("\n        \u001B[32mPaper created successfully. Press Enter to Continue\u001B[0m");
         sc.nextLine();
     }
 
@@ -89,7 +89,7 @@ public class Admin {
         while(true) {
             System.out.print("\033[H\033[2J");
             System.out.flush();
-            System.out.println("\n\n        --------ADMIN DASHBOARD--------");
+            System.out.println("\n\n        \u001B[32m--------ADMIN DASHBOARD--------\u001B[0m");
             System.out.println("           1. View Question Papers     ");
             System.out.println("           2. Add Question Paper       ");
             System.out.println("           3. Edit Question Paper      ");
@@ -97,7 +97,7 @@ public class Admin {
             System.out.println("           5. View Leaderboard         ");
             System.out.println("           6. LOG OUT                  ");
             System.out.println("        -------------------------------");
-            System.out.print("        Enter Your Choice : ");
+            System.out.print("        \u001B[33mEnter Your Choice : \u001B[0m");
             ch = sc.nextInt();
             switch (ch) {
                 case 1 -> viewPapers();
@@ -109,8 +109,8 @@ public class Admin {
                     return;
                 }
                 default -> {
-                    System.out.println("\n        Invalid Choice, try again");
-                    System.out.print("        Login Failed, Press Enter to continue");
+                    System.out.println("\n        \u001B[31mInvalid Choice, try again");
+                    System.out.print("        Press Enter to continue\u001B[0m");
                     sc.nextLine();
                 }
             }
