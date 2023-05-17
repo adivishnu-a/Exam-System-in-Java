@@ -114,6 +114,7 @@ This class represents a question paper. It contains a list of questions and prov
 ### Methods
 
 - `readPaper()`: Reads question paper data from the file.
+-  `viewPaper()`: View the specified question paper.
 - `savePaper()`: Saves question paper data to the file.
 - `setPaper()`: Allows setting up a new question paper.
 - `editPaper()`: Allows editing an existing question paper.
