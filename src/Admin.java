@@ -17,10 +17,16 @@ public class Admin {
             no++;
             System.out.println("        "+no+".  "+paper.name);
         }
-        System.out.print("\n        Enter the Paper number to view : ");
-        int ch = sc.nextInt();
-        ch=ch-1;
-        d.papers.get(ch).viewPaper();
+        try {
+            System.out.print("\n        Enter the Paper number to view : ");
+            int ch = sc.nextInt();
+            ch = ch - 1;
+            d.papers.get(ch).viewPaper();
+        } catch (Exception e){
+            System.out.println("        Paper Not Found");
+            System.out.print("\n\n        Press Enter key to Continue");
+            sc.nextLine();
+        }
     }
 
     public void addPaper() throws Exception {

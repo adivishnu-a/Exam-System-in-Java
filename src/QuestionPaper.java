@@ -147,6 +147,8 @@ public class QuestionPaper {
                 points++;
             }
         }
+        System.out.print("\n\n        Exam Finished. You scored "+points+" points.Press Enter key to Continue");
+        sc.nextLine();
         return points;
     }
 }

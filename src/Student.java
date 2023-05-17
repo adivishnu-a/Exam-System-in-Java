@@ -35,15 +35,22 @@ public class Student {
         Datasource d = new Datasource();
         d.readPapers();
         viewPapers();
-        System.out.print("\n        Enter the Paper number to be start exam : ");
-        int ch = sc.nextInt();
-        ch=ch-1;
-        int add = d.papers.get(ch).takeExam();
-        medals = medals+add;
+        int add=0;
+        try {
+            System.out.print("\n        Enter the Paper number to be start exam : ");
+            int ch = sc.nextInt();
+            ch = ch - 1;
+            add = d.papers.get(ch).takeExam();
+        } catch (Exception e){
+            System.out.println("        Paper Not Found");
+            System.out.print("\n\n        Press Enter key to Continue");
+            sc.nextLine();
+        }
+        medals = medals + add;
         d.readFile();
-        int i=0;
-        for(Student stu : d.users){
-            if(stu.name.equals(this.name))
+        int i = 0;
+        for (Student stu : d.users) {
+            if (stu.name.equals(this.name))
                 break;
             else
                 i++;
