@@ -35,10 +35,10 @@ Show some ❤️ by starring the repository! ⭐️
 - (Optional) If you want to Build from source, after cloning the repository, Compile the Java files using a Java compiler. For that, Make sure you have JDK (Java Development Kit) installed on your system and navigate to the [src](https://github.com/adivishnu-a/ExamSystem/tree/main/src) directory and run the following command. Then you can navigate to the [out](https://github.com/adivishnu-a/ExamSystem/tree/main/out/production/ExamSystem) folder and run the project using ```Main.class``` file:
 
 ```bash
-   javac Admin.java Authentication.java Datasource.java Leaderboard.java Main.java QuestionPaper.java Security.java Student.java
+   javac -d out/production/ExamSystem Admin.java Authentication.java Datasource.java Leaderboard.java Main.java QuestionPaper.java Security.java Student.java
 ```
 
-- (Alternative) Run this app directly without all these steps by downloading the pre-built and pre-compiled version [here](https://github.com/adivishnu-a/ExamSystem/releases/tag/0.1.0)
+- (Alternative) Run this app directly without all these steps by downloading the pre-built and pre-compiled version [here](https://github.com/adivishnu-a/ExamSystem/releases/tag/0.1.4)
 
 # Documentation
 
