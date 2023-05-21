@@ -36,6 +36,8 @@ Show some ❤️ by starring the repository! ⭐️
 
 ```bash
    javac -d out/production/ExamSystem Admin.java Authentication.java Datasource.java Leaderboard.java Main.java QuestionPaper.java Security.java Student.java
+   cd out/production/ExamSystem
+   java Main
 ```
 
 - (Alternative) Run this app directly without all these steps by downloading the pre-built and pre-compiled version [here](https://github.com/adivishnu-a/ExamSystem/releases/tag/0.1.4)
