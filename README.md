@@ -23,7 +23,7 @@ Show some ❤️ by starring the repository! ⭐️
 - Navigate to output folder:
 
 ```bash
-    cd ExamSystem\out\production\ExamSystem
+    cd ExamSystem/out/production/ExamSystem
 ```
 
 - Run the Project:
